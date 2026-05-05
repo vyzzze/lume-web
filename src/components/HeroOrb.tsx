@@ -28,7 +28,8 @@ export function HeroOrb() {
         loop
         playsInline
         preload="auto"
-        className={`absolute left-1/2 top-1/2 h-[120%] w-[120%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain transition-opacity duration-[1400ms] ease-out ${
+        style={{ mixBlendMode: "screen" }}
+        className={`pointer-events-none absolute left-1/2 top-1/2 h-[130%] w-[130%] max-w-none -translate-x-1/2 -translate-y-1/2 object-contain transition-opacity duration-[1400ms] ease-out ${
           loaded ? "opacity-100" : "opacity-0"
         }`}
       />
