@@ -51,12 +51,26 @@ function Features() {
           ))}
         </div>
 
-        <div className="mt-24 rounded-3xl border border-border bg-card/40 p-10 text-center backdrop-blur-md">
-          <h2 className="text-2xl font-semibold text-foreground md:text-3xl">A note on custom mods</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
-            Lume lets you load any mods you want. We are not responsible for bans or issues caused by
-            third-party mods that aren't part of the official client.
-          </p>
+        <div className="mt-24 grid gap-6 md:grid-cols-2">
+          <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/10 to-transparent p-8 backdrop-blur-md">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_8px_oklch(0.68_0.25_295)]" />
+              Legitimate client
+            </div>
+            <h2 className="text-2xl font-semibold text-foreground">Lume is not a hack client.</h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Lume is a performance and quality-of-life launcher. It does not include cheats,
+              exploits, or any modules designed to give an unfair advantage. Everything ships
+              within the rules of fair PvP.
+            </p>
+          </div>
+          <div className="rounded-3xl border border-border bg-card/40 p-8 backdrop-blur-md">
+            <h2 className="text-2xl font-semibold text-foreground">A note on custom mods</h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Lume lets you load any mods you want. We are not responsible for bans or issues
+              caused by third-party mods that aren't part of the official client.
+            </p>
+          </div>
         </div>
       </main>
       <Footer />
