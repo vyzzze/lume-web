@@ -2,31 +2,66 @@ import { Link } from "@tanstack/react-router";
 
 function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2 font-semibold text-foreground">
-      <span className="relative inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow shadow-[0_0_20px_oklch(0.68_0.25_295/0.7)]">
-        <span className="h-2.5 w-2.5 rounded-full bg-white/90" />
+    <Link to="/" className="flex items-center gap-2.5 font-semibold text-foreground group">
+      <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow shadow-[0_0_20px_oklch(0.68_0.25_295/0.5)] transition-transform group-hover:scale-105">
+        {/* Subtle white "glint" in the logo */}
+        <span className="h-2 w-2 rounded-full bg-white/90 shadow-[0_0_10px_white]" />
       </span>
-      <span className="tracking-tight">Lume</span>
+      <span className="tracking-tight text-[15px]">Lume</span>
     </Link>
   );
 }
 
-const linkCls = "text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-1.5 rounded-full";
+const linkCls = "text-[13px] font-medium text-muted-foreground hover:text-foreground transition-all px-3 py-1.5 rounded-full";
+const activeCls = "text-foreground bg-white/5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]";
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    /* Changed to sticky with backdrop-blur for that modern SaaS feel */
+    <header className="sticky top-0 z-[100] w-full border-b border-white/[0.1] bg-black/20 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <Logo />
-        <nav className="pill hidden md:flex items-center gap-1 px-2 py-1.5">
-          <Link to="/" className={linkCls} activeOptions={{ exact: true }} activeProps={{ className: "text-foreground bg-white/5 rounded-full px-3 py-1.5 text-sm" }}>Product</Link>
-          <Link to="/features" className={linkCls} activeProps={{ className: "text-foreground bg-white/5 rounded-full px-3 py-1.5 text-sm" }}>Features</Link>
-          <Link to="/download" className={linkCls} activeProps={{ className: "text-foreground bg-white/5 rounded-full px-3 py-1.5 text-sm" }}>Download</Link>
-          <a href="#" className={linkCls}>Discord</a>
+        
+        <nav className="hidden md:flex items-center gap-1 rounded-full border border-white/[0.05] bg-white/[0.02] p-1 shadow-inner">
+          <Link 
+            to="/" 
+            className={linkCls} 
+            activeOptions={{ exact: true }} 
+            activeProps={{ className: `${linkCls} ${activeCls}` }}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/features" 
+            className={linkCls} 
+            activeProps={{ className: `${linkCls} ${activeCls}` }}
+          >
+            Features
+          </Link>
+          <Link 
+            to="/download" 
+            className={linkCls} 
+            activeProps={{ className: `${linkCls} ${activeCls}` }}
+          >
+            Download
+          </Link>
+          <Link 
+            to="/market" 
+            className={linkCls} 
+            activeProps={{ className: `${linkCls} ${activeCls}` }}
+          >
+            Market
+          </Link>
+          <a href="https://dsc.gg/lume" className={linkCls} target="_blank" rel="noopener noreferrer">
+            Discord
+          </a>
           <a href="#" className={linkCls}>Changelog</a>
         </nav>
-        <div className="flex items-center gap-3">
-          <a href="#" className="hidden sm:inline text-sm text-muted-foreground hover:text-foreground">Login</a>
+        
+        <div className="flex items-center gap-4">
+          <Link to="/login" className="hidden sm:inline text-xs font-medium text-muted-foreground hover:text-foreground transition-colors">
+            Login
+          </Link>
           <Link
             to="/download"
             className="pill px-4 py-1.5 text-sm font-medium text-foreground hover:bg-white/10 transition-colors border-primary/40 shadow-[0_0_20px_oklch(0.68_0.25_295/0.25)]"

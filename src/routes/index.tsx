@@ -6,9 +6,9 @@ import { HeroOrb } from "@/components/HeroOrb";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lume — Minecraft PvP Client" },
+      { title: "Lume ✦ Minecraft PvP Client" },
       { name: "description", content: "The fastest, cleanest Minecraft PvP client. Built for Crystal, Mace, Sword and Axe PvP." },
-      { property: "og:title", content: "Lume — Minecraft PvP Client" },
+      { property: "og:title", content: "Lume ✦ Minecraft PvP Client" },
       { property: "og:description", content: "Illuminate your performance. Built for Crystal, Mace, Sword and Axe PvP." },
     ],
   }),
@@ -24,17 +24,17 @@ function Home() {
           <div className="pill mx-auto inline-flex items-center gap-2 px-3 py-1.5 text-xs text-muted-foreground">
             <span className="text-primary">✦</span> New: 1.21.11 support just landed
           </div>
-          <h1 className="mt-8 text-5xl font-semibold tracking-tight text-gradient md:text-7xl">
-            Illuminate your<br/>performance.
+          <h1 className="mt-3 text-5xl font-semibold tracking-tight text-gradient md:text-7xl">
+            Illuminate your performance.
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground md:text-lg">
-            The fastest, cleanest Minecraft PvP client. Built for Crystal, Mace, Sword and Axe PvP.
+          <p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground md:text-lg">
+            The fastest, cleanest Minecraft PvP client.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Link to="/download" className="rounded-full bg-gradient-to-b from-primary to-primary/80 px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.68_0.25_295/0.8)] hover:from-primary-glow hover:to-primary transition-colors">
+          <div className="mt-6 flex z-10 items-center justify-center gap-3">
+            <Link to="/download" className="rounded-full z-10 bg-gradient-to-b from-primary to-primary/80 px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.68_0.25_295/0.8)] hover:from-primary-glow hover:to-primary transition-colors">
               Download for free
             </Link>
-            <Link to="/features" className="pill px-5 py-2.5 text-sm text-foreground hover:bg-white/10">
+            <Link to="/features" className="pill z-10 px-5 py-2.5 text-sm text-foreground hover:bg-white/10">
               View features
             </Link>
           </div>
