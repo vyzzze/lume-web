@@ -15,9 +15,7 @@ export function HeroOrb() {
   }, []);
 
   return (
-    <div className="relative mx-auto mt-20 h-[480px] w-full max-w-5xl overflow-hidden">
-      {/* ambient bloom behind everything */}
-      <div className="absolute left-1/2 top-[42%] h-[520px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-[radial-gradient(ellipse_at_center,oklch(0.55_0.28_295/0.55),oklch(0.4_0.25_290/0.25)_35%,transparent_70%)] blur-3xl" />
+    <div className="relative mx-auto mt-20 h-[480px] w-full max-w-5xl">
 
       {/* the lazy-loaded hero video */}
       <video
