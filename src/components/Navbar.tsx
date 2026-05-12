@@ -2,10 +2,13 @@ import { Link, NavLink } from "react-router-dom";
 
 function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2.5 font-semibold text-foreground group">
-      <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary-glow shadow-[0_0_20px_oklch(0.68_0.25_295/0.5)] transition-transform group-hover:scale-105">
-        <span className="h-2 w-2 rounded-full bg-white/90 shadow-[0_0_10px_white]" />
-      </span>
+<Link to="/" className="flex items-center gap-2.5 font-semibold text-foreground group">
+      <img 
+        src={"/lume-web/logo.png"} 
+        alt="Lume Logo"
+        className="h-8 w-8 object-contain transition-transform group-hover:scale-110" 
+      />
+      
       <span className="tracking-tight text-[15px]">Lume</span>
     </Link>
   );
