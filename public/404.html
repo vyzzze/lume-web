@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Lume</title>
-    <script>
-      // GitHub Pages SPA fallback: redirect unknown paths to index with hash
-      // so the client router can handle them.
-      var segmentCount = 1; // /lume-web/
-      var l = window.location;
-      l.replace(
-        l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") +
-        l.pathname.split("/").slice(0, 1 + segmentCount).join("/") + "/?p=/" +
-        l.pathname.split("/").slice(1 + segmentCount).join("/").replace(/&/g, "~and~") +
-        (l.search ? "&q=" + l.search.slice(1).replace(/&/g, "~and~") : "") +
-        l.hash
-      );
-    </script>
+    <title>Page not found — Lume</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { background:#0a0a0f; color:#e5e5ee; font-family:system-ui,sans-serif; display:flex; align-items:center; justify-content:center; min-height:100vh; margin:0; text-align:center; }
+      a { color:#a78bfa; text-decoration:none; }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <h1 style="font-size:4rem;margin:0">404</h1>
+      <p>Page not found.</p>
+      <p><a href="/lume-web/">← Back home</a></p>
+    </div>
+  </body>
 </html>
