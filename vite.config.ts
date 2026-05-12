@@ -13,9 +13,9 @@ export default defineConfig({
       crawlLinks: true,
     },
     pages: [
-      { path: "/" },
-      { path: "/download" },
-      { path: "/features" },
+      { path: "/lume-web/" },
+      { path: "/lume-web/download" },
+      { path: "/lume-web/features" },
     ],
   },
 });
