@@ -7,9 +7,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Lume ✦ Minecraft PvP Client" },
-      { name: "description", content: "The fastest, cleanest Minecraft PvP client. Built for Crystal, Mace, Sword and Axe PvP." },
+      { name: "description", content: "The fastest, cleanest Minecraft PvP client yet." },
       { property: "og:title", content: "Lume ✦ Minecraft PvP Client" },
-      { property: "og:description", content: "Illuminate your performance. Built for Crystal, Mace, Sword and Axe PvP." },
+      { property: "og:description", content: "Illuminate your performance." },
     ],
   }),
   component: Home,
