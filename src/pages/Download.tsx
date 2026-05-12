@@ -1,18 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
-export const Route = createFileRoute("/download")({
-  head: () => ({
-    meta: [
-      { title: "Download — Lume" },
-      { name: "description", content: "Download Lume for Windows, macOS and Linux." },
-      { property: "og:title", content: "Download Lume" },
-      { property: "og:description", content: "Available for Windows, macOS and Linux." },
-    ],
-  }),
-  component: Download,
-});
 
 const platforms = [
   { os: "Windows", ext: ".exe", size: "84 MB", req: "Windows 10 or newer · 4 GB RAM" },
@@ -20,7 +7,7 @@ const platforms = [
   { os: "Linux", ext: ".AppImage", size: "78 MB", req: "Ubuntu 20.04+ / any modern distro" },
 ];
 
-function Download() {
+export default function Download() {
   return (
     <div className="min-h-screen">
       <Navbar />
