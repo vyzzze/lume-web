@@ -21,7 +21,7 @@ export function HeroOrb() {
       {/* 2. Added a mask-image to the video to fade the bottom edge out */}
       <video
           ref={videoRef}
-          src="/hero.webm"
+          src="/lume-web/hero.webm"
           autoPlay
           muted
           loop
