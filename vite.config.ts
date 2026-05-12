@@ -1,21 +1,15 @@
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  vite: {
-    base: "/lume-web/",
-    build: {
-      outDir: "dist",
-    },
+  base: "/lume-web/",
+  plugins: [react(), tailwindcss(), tsconfigPaths()],
+  build: {
+    outDir: "dist",
   },
-  tanstackStart: {
-    prerender: {
-      enabled: true,
-      crawlLinks: true,
-    },
-    pages: [
-      { path: "/lume-web/" },
-      { path: "/lume-web/download" },
-      { path: "/lume-web/features" },
-    ],
+  server: {
+    port: 8080,
   },
 });
