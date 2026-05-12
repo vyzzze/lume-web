@@ -6,10 +6,5 @@ export default defineConfig({
     build: {
       outDir: "dist",
     },
-    tanstackStart: {
-      prerender: {
-        routes: ["/", "/download", "/features"],
-      },
-    },
   },
 });
