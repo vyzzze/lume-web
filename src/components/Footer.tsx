@@ -20,7 +20,7 @@ export function Footer() {
       <div className="relative h-[520px] w-screen w-max-none z-0 left-1/2 -translate-x-1/2 overflow-hidden">
         <video
           ref={videoRef}
-          src="/hero.webm"
+          src="/lume-web/hero.webm"
           autoPlay
           muted
           loop
