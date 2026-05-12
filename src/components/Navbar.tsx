@@ -6,7 +6,7 @@ function Logo() {
       <img 
         src={"/lume-web/logo.png"} 
         alt="Lume Logo"
-        className="h-8 w-8 object-contain transition-transform group-hover:scale-110" 
+        className="h-15 w-15 object-contain transition-transform group-hover:scale-110" 
       />
       
       <span className="tracking-tight text-[15px]">Lume</span>
