@@ -1,21 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { HeroOrb } from "@/components/HeroOrb";
+import { Link } from "react-router-dom";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Lume ✦ Minecraft PvP Client" },
-      { name: "description", content: "The fastest, cleanest Minecraft PvP client yet." },
-      { property: "og:title", content: "Lume ✦ Minecraft PvP Client" },
-      { property: "og:description", content: "Illuminate your performance." },
-    ],
-  }),
-  component: Home,
-});
-
-function Home() {
+export default function Home() {
   return (
     <div className="min-h-screen">
       <Navbar />

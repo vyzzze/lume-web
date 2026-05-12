@@ -1,18 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
-export const Route = createFileRoute("/features")({
-  head: () => ({
-    meta: [
-      { title: "Features — Lume" },
-      { name: "description", content: "Combat, visuals, performance and mod support — every Lume feature." },
-      { property: "og:title", content: "Features — Lume" },
-      { property: "og:description", content: "Combat, visuals, performance and mod support." },
-    ],
-  }),
-  component: Features,
-});
 
 const features = [
   { t: "Combat", d: "ComboCounter, client-based HitReg, no distractions. Fights stay clean and your inputs land." },
@@ -23,7 +10,7 @@ const features = [
   { t: "Updates", d: "First-class support for the latest Minecraft versions, shipped fast and tested." },
 ];
 
-function Features() {
+export default function Features() {
   return (
     <div className="min-h-screen">
       <Navbar />
