@@ -29,12 +29,12 @@ jobs:
         run: npm ci
   
       - name: Build project
-        run: npm run build -- --preset github-pages
+        run: npm run build
 
       - name: Upload production artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/client # Change to './build' if using Create React App
+          path: ./dist/client
   
       - name: Deploy to GitHub Pages
         id: deployment
