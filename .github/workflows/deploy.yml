@@ -34,7 +34,7 @@ jobs:
       - name: Upload production artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # Change to './build' if using Create React App
+          path: ./dist/client # Change to './build' if using Create React App
   
       - name: Deploy to GitHub Pages
         id: deployment
