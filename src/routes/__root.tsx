@@ -29,10 +29,10 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lume — Minecraft PvP Client" },
-      { name: "description", content: "The fastest, cleanest Minecraft PvP client." },
+      { title: "Lume - Minecraft PvP Client" },
+      { name: "description", content: "The fastest, cleanest Minecraft PvP client yet." },
       { name: "author", content: "Lume" },
-      { property: "og:title", content: "Lume — Minecraft PvP Client" },
+      { property: "og:title", content: "Lume - Minecraft PvP Client" },
       { property: "og:description", content: "Illuminate your performance." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
